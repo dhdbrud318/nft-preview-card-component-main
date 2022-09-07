@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(217, 54%, 11%);
+}
+
+main {
+  width: 360px;
+  overflow: hidden;
+  background: linear-gradient(hsl(215, 48%, 19%), hsl(216, 50%, 16%));
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0.2rem rgba(21, 37, 59, 0.4);
+}
+
+h1 {
+  color: white;
+  font-size: 1.25rem;
+}
+
+p {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.text-hover-effect {
+  transition: color 0.15s;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.img-row {
+  margin-top: 7%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  background-color: hsla(178, 100%, 50%, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.4s;
+  cursor: pointer;
+}
+
+.overlay img {
+  width: 16%;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.container + .container {
+  margin-top: 1.2rem;
+}
+
+.text-row p {
+  margin-top: 0.75rem;
+}
+
+.coin-info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.coin-info-row img {
+  width: auto;
+  object-fit: contain;
+  margin-right: 0.4rem;
+}
+
+.efh-available p {
+  color: hsl(178, 100%, 50%);
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 0.1rem solid hsl(215, 32%, 27%);
+}
+
+.creator-info-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.875rem;
+}
+
+.profile-img {
+  width: 1.8rem;
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+span {
+  font-weight: 400;
+  color: white;
+}
+
+h1:hover,
+span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 350px) {
+  .coin-info-row {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .day-left {
+    margin-top: 0.25rem;
+  }
+
+  .creator-info-row {
+    flex-direction: column;
+  }
+
+  .profile-img {
+    align-self: center;
+    margin-bottom: 0.5rem;
+  }
+} ;
