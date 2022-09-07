@@ -99,6 +99,7 @@ img {
 
 .coin-info-row img {
   width: auto;
+  height: 70%;
   object-fit: contain;
   margin-right: 0.4rem;
 }
@@ -110,6 +111,7 @@ img {
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 hr {
