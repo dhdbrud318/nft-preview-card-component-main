@@ -5,12 +5,19 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 18px;
-  font-family: "Outfit", sans-serif;
+:root {
+  --p-color: hsl(215, 51%, 70%);
+  --overlay: hsla(178, 100%, 50%, 0.4);
+  --primary-cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(216, 50%, 16%);
+  --card-bg-linear-top: hsl(215, 48%, 19%);
+  --card-bg-main: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
 }
 
 body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,10 +29,16 @@ body {
 main {
   width: 360px;
   overflow: hidden;
-  background: linear-gradient(hsl(215, 48%, 19%), hsl(216, 50%, 16%));
+  background: linear-gradient(var(--card-bg-linear-top), var(--card-bg-main));
   border: none;
   border-radius: 1rem;
   box-shadow: 0 0 0.5rem 0.2rem rgba(21, 37, 59, 0.4);
+}
+
+main:hover {
+  filter: saturate(1.4);
+  transition: ease-in-out 0.6s;
+  transform: scale(0.99);
 }
 
 h1 {
@@ -34,7 +47,7 @@ h1 {
 }
 
 p {
-  color: hsl(215, 51%, 70%);
+  color: var(--p-color);
   font-weight: 300;
 }
 
@@ -61,7 +74,7 @@ img {
 }
 
 .overlay {
-  background-color: hsla(178, 100%, 50%, 0.4);
+  background-color: var(--overlay);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +118,7 @@ img {
 }
 
 .efh-available p {
-  color: hsl(178, 100%, 50%);
+  color: var(--primary-cyan);
   font-weight: 400;
 }
 
@@ -118,7 +131,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 0.1rem solid hsl(215, 32%, 27%);
+  border-top: 0.1rem solid var(--line-color);
 }
 
 .creator-info-row {
@@ -143,7 +156,7 @@ span {
 
 h1:hover,
 span:hover {
-  color: hsl(178, 100%, 50%);
+  color: var(--primary-cyan);
 }
 
 @media (max-width: 375px) {
@@ -170,4 +183,10 @@ span:hover {
     align-self: center;
     margin-bottom: 0.5rem;
   }
-} ;
+}
+
+.attribution {
+  margin-top: 2rem;
+  color: white;
+  font-weight: 300;
+}
